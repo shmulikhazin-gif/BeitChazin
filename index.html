@@ -1,1 +1,727 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלון בוטיק בית חזין | אומן | Beit Chazin Boutique Hotel Uman</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Cinzel:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --royal-blue: #0A1931;
+            --deep-blue: #152B52;
+            --accent-blue: #185ADB;
+            --neon-blue: #00d2ff;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --dark-bg: #090C10;
+            --card-bg: #111622;
+            --text-light: #F5F7FA;
+            --text-muted: #A0AEC0;
+            --border-color: rgba(212, 175, 55, 0.25);
+            --font-he: 'Assistant', sans-serif;
+            --font-en: 'Cinzel', serif;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-he);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Damask Pattern Background */
+        .damask-bg {
+            background-color: #0b1329;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0), radial-gradient(rgba(24, 90, 219, 0.15) 1px, #0b1329 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(9, 12, 16, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            text-decoration: none;
+        }
+
+        .glowing-logo {
+            font-family: var(--font-en);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px #00d2ff, 0 0 10px #00d2ff, 0 0 20px #185ADB;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .glowing-logo span {
+            display: block;
+            font-size: 0.6rem;
+            color: var(--gold-light);
+            text-shadow: 0 0 5px var(--gold-primary);
+            letter-spacing: 2px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-lang {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-light);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-lang:hover {
+            background: var(--gold-primary);
+            color: var(--dark-bg);
+        }
+
+        .fb-nav-btn {
+            background: #1877F2;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(24, 119, 242, 0.3);
+        }
+
+        .fb-nav-btn:hover {
+            background: #145dbf;
+            transform: translateY(-2px);
+        }
+
+        .wa-nav-btn {
+            background: #25D366;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .wa-nav-btn:hover {
+            background: #1ebc57;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Banner */
+        .hero {
+            padding-top: 130px;
+            padding-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(9, 12, 16, 0.75) 0%, rgba(13, 25, 49, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            text-align: center;
+        }
+
+        .renaissance-frame {
+            border: 2px solid var(--gold-primary);
+            padding: 40px 30px;
+            background: rgba(10, 25, 49, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            max-width: 850px;
+            width: 90%;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.2);
+            position: relative;
+        }
+
+        .renaissance-frame::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            pointer-events: none;
+        }
+
+        .hero-title-glowing {
+            font-family: var(--font-en);
+            font-size: 2.8rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff, 0 0 35px #185ADB;
+            margin-bottom: 5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--gold-primary);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .hill-notice {
+            background: rgba(24, 90, 219, 0.25);
+            border-right: 4px solid var(--neon-blue);
+            padding: 12px 18px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #d1e8ff;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+
+        html[dir="ltr"] .hill-notice {
+            border-right: none;
+            border-left: 4px solid var(--neon-blue);
+            text-align: left;
+        }
+
+        .btn-primary-wa {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-primary-wa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--gold-light);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            margin: 10px auto 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+
+        /* Mikveh Section */
+        .mikveh-card {
+            background: var(--card-bg);
+            border: 1px solid var(--gold-primary);
+            border-radius: 12px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .mikveh-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .mikveh-list {
+            list-style: none;
+            margin: 18px 0;
+        }
+
+        .mikveh-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .mikveh-list i {
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+        }
+
+        /* Rooms Grid */
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .room-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .room-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+        }
+
+        .room-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .room-details {
+            padding: 20px;
+        }
+
+        .room-title {
+            font-size: 1.3rem;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        /* Facebook Section */
+        .fb-card {
+            background: linear-gradient(135deg, #0d2347, #0a1931);
+            border: 1px solid #1877F2;
+            padding: 35px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(24, 119, 242, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: #05070a;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .footer-socials a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-socials a:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.2);
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-wa {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 999;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        html[dir="ltr"] .floating-wa {
+            left: auto;
+            right: 25px;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-glowing { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .mikveh-card { grid-template-columns: 1fr; }
+            .fb-nav-btn span, .wa-nav-btn span { display: none; }
+        }
+    </style>
+</head>
+<body class="damask-bg">
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo-container">
+            <div class="glowing-logo">
+                BEIT CHAZIN
+                <span>BOUTIQUE HOTEL</span>
+            </div>
+        </a>
+
+        <div class="nav-actions">
+            <!-- Language Switcher -->
+            <button class="btn-lang" onclick="toggleLanguage()">
+                <i class="fa-solid fa-globe"></i>
+                <span id="langLabel">English</span>
+            </button>
+
+            <!-- Facebook Button -->
+            <a href="https://www.facebook.com/smw.l.ywsp.hzyn" target="_blank" class="fb-nav-btn" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span data-i18n="fbNav">פייסבוק</span>
+            </a>
+
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/972509558399?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9E%D7%9C%D7%95%D7%9F%20%D7%91%D7%99%D7%AA%20%D7%97%D7%96%D7%99%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%90%D7%99%D7%9D" target="_blank" class="wa-nav-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span data-i18n="waNav">וואצאפ</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <div class="hero">
+            <div class="renaissance-frame">
+                <div class="hero-title-glowing">BEIT CHAZIN</div>
+                <div class="hero-subtitle" data-i18n="hotelSubtitle">מלון בוטיק בית חזין - אומן</div>
+                
+                <div class="location-badge">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <span data-i18n="distText">2 דקות הליכה מהציון הקדוש של רבי נחמן מברסלב</span>
+                </div>
+
+                <!-- Notice for Hill Walk -->
+                <div class="hill-notice">
+                    <i class="fa-solid fa-mountain-city" style="margin-left: 6px;"></i>
+                    <span data-i18n="hillNotice">שימו לב: הדרך לציון כוללת עלייה/גבעה קצרה של כ-2 דקות הליכה בלבד.</span>
+                </div>
+
+                <a href="https://wa.me/972509558399?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%96%D7%9E%D7%A0%D7%AA%20%D7%97%D7%93%D7%A8%20%D7%91%D7%91%D7%99%D7%AA%20%D7%97%D7%96%D7%99%D7%9F" target="_blank" class="btn-primary-wa">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-i18n="heroWaBtn">להזמנה מהירה בוואצאפ</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hotel Features -->
+        <section>
+            <div class="section-title">
+                <h2 data-i18n="featuresTitle">חווית אירוח ברמה אחרת</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-synagogue"></i></div>
+                    <h3 data-i18n="feat1Title">קרוב לציון</h3>
+                    <p data-i18n="feat1Desc">כ-2 דקות הליכה בלבד מציון רבינו נחמן בן פייגא זיע"א באומן (כולל עלייה קלה).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-crown"></i></div>
+                    <h3 data-i18n="feat2Title">עיצוב רנסנס יוקרתי</h3>
+                    <p data-i18n="feat2Desc">עמודים מוזהבים, טפטים מלכותיים, ותאורת לד כחולה ומוארת בסגנון ייחודי.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3 data-i18n="feat3Title">שירות בוואצאפ</h3>
+                    <p data-i18n="feat3Desc">זמינות מלאה, מענה מהיר והזמנות ישירות דרך הוואצאפ בלבד.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mikveh & Sauna Section -->
+        <section>
+            <div class="section-title">
+                <h2 data-i18n="mikvehTitle">מקווה טהרה וסאונה במלון</h2>
+            </div>
+            <div class="mikveh-card">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="מקווה וסאונה" class="mikveh-img">
+                <div>
+                    <h3 style="color: var(--gold-light); margin-bottom: 10px;" data-i18n="mikvehHead">מקווה מחומם ונקי תמיד</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;" data-i18n="mikvehDesc">לרווחת האורחים במלון בית חזין באומן – מקווה טהרה מהודר, מתוחזק ברמת ניקיון קפדנית ביותר, עם מים חמים ומתחם סאונה מפנק.</p>
+                    
+                    <ul class="mikveh-list">
+                        <li><i class="fa-solid fa-temperature-arrow-up"></i> <span data-i18n="m1">מים חמים ומפונקים 24/7</span></li>
+                        <li><i class="fa-solid fa-sparkles"></i> <span data-i18n="m2">נקי, סטרילי ומתוחזק באופן קבוע</span></li>
+                        <li><i class="fa-solid fa-hot-tub-person"></i> <span data-i18n="m3">סאונה מרעננת ומפנקת</span></li>
+                    </ul>
+
+                    <a href="https://wa.me/972509558399?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%90%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%A7%D7%95%D7%95%D7%94%20%D7%95%D7%94%D7%A1%D7%90%D7%95%D7%A0%D7%94" target="_blank" class="btn-primary-wa" style="margin-top: 10px;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-i18n="mikvehWa">לבירור על המקווה בוואצאפ</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Section -->
+        <section>
+            <div class="section-title">
+                <h2 data-i18n="roomsTitle">החדרים והסוויטות</h2>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="סוויטה מלכותית" class="room-img">
+                    <div class="room-details">
+                        <div class="room-title" data-i18n="room1Title">סוויטה מלכותית זוגית</div>
+                        <p data-i18n="room1Desc">מיטה מרווחת, עיצוב יוקרתי, מיזוג אוויר מלא, חדר רחצה פרטי ואווירה קדושה.</p>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="חדר משפחתי" class="room-img">
+                    <div class="room-details">
+                        <div class="room-title" data-i18n="room2Title">חדר משפחתי / קבוצות</div>
+                        <p data-i18n="room2Desc">מתאים לעולים לרבינו, מיטות נוחות, ארון אכסון, פרטיות וקרבה מירבית לציון.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facebook Dedicated Section -->
+        <section>
+            <div class="fb-card">
+                <i class="fab fa-facebook-f" style="font-size: 3.5rem; color: #1877F2; margin-bottom: 15px;"></i>
+                <h2 style="color: #ffffff; margin-bottom: 10px;" data-i18n="fbTitle">עקבו אחרינו בפייסבוק</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px;" data-i18n="fbDesc">עדכונים, תמונות וחדשות ממלון בית חזין באומן</p>
+                <a href="https://www.facebook.com/smw.l.ywsp.hzyn" target="_blank" class="fb-nav-btn" style="display: inline-flex; padding: 12px 30px; font-size: 1rem;">
+                    <i class="fab fa-facebook-f"></i>
+                    <span data-i18n="fbBtn">מעבר לעמוד הפייסבוק</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="glowing-logo" style="font-size: 1.3rem;">
+            BEIT CHAZIN
+            <span>BOUTIQUE HOTEL • UMAN</span>
+        </div>
+        <p style="margin-top: 10px; color: var(--text-muted);" data-i18n="footerText">
+            אומן, אוקראינה • 2 דקות הליכה מציון רבי נחמן בן פייגא
+        </p>
+
+        <!-- Social Icons in Footer -->
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/smw.l.ywsp.hzyn" target="_blank" style="background: #1877F2;" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/972509558399" target="_blank" style="background: #25D366;" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #555;">© כל הזכויות שמורות למלון בוטיק בית חזין</p>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/972509558399?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%99%D7%AA%20%D7%97%D7%96%D7%99%D7%9F" target="_blank" class="floating-wa" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Language Script -->
+    <script>
+        const translations = {
+            he: {
+                fbNav: "פייסבוק",
+                waNav: "וואצאפ",
+                hotelSubtitle: "מלון בוטיק בית חזין - אומן",
+                distText: "2 דקות הליכה מהציון הקדוש של רבי נחמן מברסלב",
+                hillNotice: "שימו לב: הדרך לציון כוללת עלייה/גבעה קצרה של כ-2 דקות הליכה בלבד.",
+                heroWaBtn: "להזמנה מהירה בוואצאפ",
+                featuresTitle: "חווית אירוח ברמה אחרת",
+                feat1Title: "קרוב לציון",
+                feat1Desc: "כ-2 דקות הליכה בלבד מציון רבינו נחמן בן פייגא זיע\"א באומן (כולל עלייה קלה).",
+                feat2Title: "עיצוב רנסנס יוקרתי",
+                feat2Desc: "עמודים מוזהבים, טפטים מלכותיים, ותאורת לד כחולה ומוארת בסגנון ייחודי.",
+                feat3Title: "שירות בוואצאפ",
+                feat3Desc: "זמינות מלאה, מענה מהיר והזמנות ישירות דרך הוואצאפ בלבד.",
+                mikvehTitle: "מקווה טהרה וסאונה במלון",
+                mikvehHead: "מקווה מחומם ונקי תמיד",
+                mikvehDesc: "לרווחת האורחים במלון בית חזין באומן – מקווה טהרה מהודר, מתוחזק ברמת ניקיון קפדנית ביותר, עם מים חמים ומתחם סאונה מפנק.",
+                m1: "מים חמים ומפונקים 24/7",
+                m2: "נקי, סטרילי ומתוחזק באופן קבוע",
+                m3: "סאונה מרעננת ומפנקת",
+                mikvehWa: "לבירור על המקווה בוואצאפ",
+                roomsTitle: "החדרים והסוויטות",
+                room1Title: "סוויטה מלכותית זוגית",
+                room1Desc: "מיטה מרווחת, עיצוב יוקרתי, מיזוג אוויר מלא, חדר רחצה פרטי ואווירה קדושה.",
+                room2Title: "חדר משפחתי / קבוצות",
+                room2Desc: "מתאים לעולים לרבינו, מיטות נוחות, ארון אכסון, פרטיות וקרבה מירבית לציון.",
+                fbTitle: "עקבו אחרינו בפייסבוק",
+                fbDesc: "עדכונים, תמונות וחדשות ממלון בית חזין באומן",
+                fbBtn: "מעבר לעמוד הפייסבוק",
+                footerText: "אומן, אוקראינה • 2 דקות הליכה מציון רבי נחמן בן פייגא"
+            },
+            en: {
+                fbNav: "Facebook",
+                waNav: "WhatsApp",
+                hotelSubtitle: "Beit Chazin Boutique Hotel - Uman",
+                distText: "2-Minute Walk to Rabbi Nachman's Holy Tziyon",
+                hillNotice: "Note: The walk to the Tziyon includes a short 2-minute hill incline.",
+                heroWaBtn: "Quick WhatsApp Booking",
+                featuresTitle: "A Luxury Hospitality Experience",
+                feat1Title: "Near the Tziyon",
+                feat1Desc: "Just a 2-minute walk to Rabbi Nachman's Tziyon in Uman (includes a slight incline).",
+                feat2Title: "Modern Renaissance Design",
+                feat2Desc: "Golden columns, damask wallpaper, and illuminated royal blue LED sign lighting.",
+                feat3Title: "WhatsApp Direct Service",
+                feat3Desc: "Fast response, full availability, and direct bookings strictly via WhatsApp.",
+                mikvehTitle: "On-Site Mikveh & Sauna",
+                mikvehHead: "Heated & Impeccably Clean Mikveh",
+                mikvehDesc: "For guests at Beit Chazin Hotel in Uman – fully heated Mikveh, strictly maintained cleanliness, and relaxing sauna facilities.",
+                m1: "Heated water 24/7",
+                m2: "Pristine, sanitized, and regularly maintained",
+                m3: "Relaxing on-site sauna",
+                mikvehWa: "Inquire via WhatsApp",
+                roomsTitle: "Rooms & Suites",
+                room1Title: "Royal Double Suite",
+                room1Desc: "Spacious bed, luxury Renaissance styling, full AC, private bathroom, and serene atmosphere.",
+                room2Title: "Family & Group Room",
+                room2Desc: "Perfect for pilgrims, comfortable beds, storage, and ultimate proximity to the Tziyon.",
+                fbTitle: "Follow Us on Facebook",
+                fbDesc: "Photos, news, and updates from Beit Chazin Hotel Uman",
+                fbBtn: "Visit Facebook Page",
+                footerText: "Uman, Ukraine • 2-Minute Walk to Rabbi Nachman's Tziyon"
+            }
+        };
+
+        let currentLang = 'he';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+
+            document.getElementById('langLabel').textContent = currentLang === 'he' ? 'English' : 'עברית';
+
+            document.querySelectorAll('[data-i18n]').forEach(elem => {
+                const key = elem.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    elem.textContent = translations[currentLang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>
